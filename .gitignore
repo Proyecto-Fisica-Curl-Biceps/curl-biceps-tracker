@@ -1,0 +1,37 @@
+# Entorno virtual
+.venv/
+venv/
+ENV/
+.env/
+
+# Archivos de caché de Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Distribución / empaquetado
+dist/
+build/
+*.egg-info/
+
+# Logs y databases
+*.log
+*.sqlite
+
+# IDEs y editores
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archivos temporales del sistema
+.DS_Store
+Thumbs.db
+
+# Archivos específicos del proyecto
+*.mp4
+!videos/*.mp4
+
+*.png
+!outputs/*.png
