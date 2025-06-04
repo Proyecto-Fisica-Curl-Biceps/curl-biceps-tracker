@@ -24,6 +24,8 @@ def main():
     cap = cv2.VideoCapture(VIDEO_PATH)
     fps = cap.get(cv2.CAP_PROP_FPS)
     cap.release()
+    if fps<= 0
+        fps= 30.0
     delay = int(1000 / fps)
 
     ext = PoseExtractor()
