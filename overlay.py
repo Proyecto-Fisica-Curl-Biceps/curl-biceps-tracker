@@ -37,7 +37,7 @@ class Overlay:
             x, y = int(elbow[0]), int(elbow[1])
             cv2.putText(
                 frame,
-                f"θ_elbow: {angle:.1f}°",
+                f"elbow: {angle:.1f}",
                 (x - 50, y - 20),
                 cv2.FONT_HERSHEY_SIMPLEX,
                 0.7,
