@@ -16,7 +16,7 @@ def pixels_to_meters(pt_px):
     return x_px * PIXEL_TO_METER, y_px * PIXEL_TO_METER
 
 def cartesian_to_polar(pt):
-    """De (x, y) cartesianos a (r, θ) polares (θ en rad)."""
+    """De (x, y) cartesianas a (r, θ) polares (θ en radianes)."""
     x, y = pt
     r = math.hypot(x, y)
     theta = math.atan2(y, x)
