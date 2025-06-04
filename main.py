@@ -40,16 +40,18 @@ def main():
         times.append(t)
 
         # cálculo velo/acc en px
+        scale_v= 1.15
+        scale_a = 5 
         vel_px = (ARROW_SIZE, ARROW_SIZE)
         acc_px = (ARROW_SIZE, ARROW_SIZE)
         if len(raw_wrist) >= 2:
             dx = raw_wrist[-1][0] - raw_wrist[-2][0]
             dy = raw_wrist[-1][1] - raw_wrist[-2][1]
-            vel_px = (dx, dy)
+            vel_px = (dx*scale_v, dy*scale_v)
         if len(raw_wrist) >= 3:
             dx1 = raw_wrist[-2][0] - raw_wrist[-3][0]
             dy1 = raw_wrist[-2][1] - raw_wrist[-3][1]
-            acc_px = (vel_px[0] - dx1, vel_px[1] - dy1)
+            acc_px = ((vel_px[0] - dx1)*scale_a,( vel_px[1] - dy1)*scale_a)
 
         # ángulo del codo
         ang = angle_between(
