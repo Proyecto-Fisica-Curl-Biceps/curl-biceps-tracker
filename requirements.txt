@@ -1,3 +1,3 @@
 opencv-python
-mediapipe
 cv2
+mediapipe
